@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🤖 AIPL Quiz Bot</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:900px;
+    max-width:100%;
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,255,255,.15);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#timer{
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.score-box{
+    text-align:center;
+    font-size:20px;
+    color:#22c55e;
+    margin-bottom:15px;
+}
+
+.progress{
+    margin-bottom:20px;
+    text-align:center;
+    font-size:18px;
+}
+
+.progress-container{
+    width:100%;
+    height:14px;
+    background:#334155;
+    border-radius:50px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+#progress{
+    width:0%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #06b6d4
+    );
+    transition:.5s;
+}
+
+#question{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.answer-btn{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    transition:.3s;
+}
+
+.answer-btn:hover{
+    background:#3b82f6;
+}
+
+.correct{
+    background:#16a34a !important;
+}
+
+.wrong{
+    background:#dc2626 !important;
+}
+
+.result-circle{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:10px solid #22c55e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px auto;
+    font-size:45px;
+    font-weight:bold;
+}
+
+.review-card{
+    background:#0f172a;
+    padding:20px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.review-card h3{
+    margin-bottom:10px;
+}
+
+.restart-btn{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+}
+
+.footer-name .text{
+    font-size:24px;
+    font-weight:900;
+
+    background:linear-gradient(
+        90deg,
+        #c084fc,
+        #a855f7,
+        #7e22ce,
+        #c084fc
+    );
+
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:glowMove 4s ease infinite;
+
+    text-shadow:
+        0 0 10px rgba(168,85,247,.5),
+        0 0 20px rgba(168,85,247,.4);
+
+    filter:drop-shadow(0 0 8px rgba(168,85,247,.5));
+}
+
+.footer-name{
+    margin-top:25px;
+    text-align:center;
+    color:#FFD700; 
+    transform:perspective(500px) rotateX(12deg);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AIPL Quiz Bot</h1>
+
+<div id="timer">⏳ 30:00</div>
+
+<div class="score-box">
+Score: <span id="liveScore">0</span>
+</div>
+
+<div class="progress">
+Question <span id="current">1</span> /
+<span id="total">0</span>
+</div>
+
+<div class="progress-container">
+<div id="progress"></div>
+</div>
+
+<h2 id="question"></h2>
+
+<div id="answers"></div>
+<div class="footer-name">
+  ⚡ <span class="text">Developed by ENG/ Ahmed Mohamed Abo Rashed</span> ⚡
+</div>
+
+</div>
+
+<script>
+
+let questions = [];
+let currentQuestion = 0;
+let score = 0;
+let wrongAnswers = [];
+
+let timeLeft = 1800;
+const timer = setInterval(()=>{
+
+    let min = Math.floor(timeLeft / 60);
+    let sec = timeLeft % 60;
+
+    document.getElementById("timer").innerText =
+    `⏳ ${min}:${sec.toString().padStart(2,"0")}`;
+
+    timeLeft--;
+
+    if(timeLeft < 0){
+
+        clearInterval(timer);
+
+        showResult();
+    }
+
+},1000);
+
+
+fetch("qu_bank.json")
+.then(res => res.json())
+.then(data => {
+
+    questions = shuffle(data);
+
+    document.getElementById("total").innerText =
+    questions.length;
+
+    loadQuestion();
+
+});
+
+
+function shuffle(array){
+
+    for(let i=array.length-1;i>0;i--){
+
+        let j=Math.floor(Math.random()*(i+1));
+
+        [array[i],array[j]] =
+        [array[j],array[i]];
+    }
+
+    return array;
+}
+
+
+function loadQuestion(){
+
+    const q = questions[currentQuestion];
+
+    document.getElementById("current").innerText =
+    currentQuestion + 1;
+
+    document.getElementById("question").innerText =
+    q.question;
+
+    document.getElementById("progress").style.width =
+    ((currentQuestion+1) / questions.length *100) + "%";
+
+    const answersDiv =
+    document.getElementById("answers");
+
+    answersDiv.innerHTML = "";
+
+    let options =
+    Object.entries(q.options);
+
+    shuffle(options);
+
+    options.forEach(([key,value])=>{
+
+        let btn =
+        document.createElement("button");
+
+        btn.classList.add("answer-btn");
+
+        btn.dataset.key = key;
+
+        btn.innerText =
+        `${key}. ${value}`;
+
+        btn.onclick = () =>
+        checkAnswer(key,btn);
+
+        answersDiv.appendChild(btn);
+
+    });
+
+}
+function checkAnswer(choice, btn){
+
+    const q = questions[currentQuestion];
+
+    const buttons =
+    document.querySelectorAll(".answer-btn");
+
+    buttons.forEach(b=>b.disabled=true);
+
+    if(choice === q.answer){
+
+        score++;
+
+        document
+        .getElementById("liveScore")
+        .innerText = score;
+
+        btn.classList.add("correct");
+
+    }else{
+
+        btn.classList.add("wrong");
+
+        wrongAnswers.push({
+
+            question:q.question,
+
+            selected:
+            q.options[choice],
+
+            correct:
+            q.options[q.answer]
+
+        });
+
+        buttons.forEach(b=>{
+
+            if(
+                b.dataset.key
+                === q.answer
+            ){
+                b.classList.add("correct");
+            }
+
+        });
+    }
+
+    setTimeout(()=>{
+
+        currentQuestion++;
+
+        if(
+            currentQuestion
+            <
+            questions.length
+        ){
+
+            loadQuestion();
+
+        }else{
+
+            showResult();
+
+        }
+
+    },1500);
+
+}
+
+
+function showResult(){
+
+    clearInterval(timer);
+
+    let percent =
+    Math.round(
+        (score/questions.length)
+        *100
+    );
+
+    let high =
+    Math.max(
+        localStorage.highScore || 0,
+        score
+    );
+
+    localStorage.highScore =
+    high;
+
+    document
+    .querySelector(".container")
+    .innerHTML = `
+
+    <h1>🏆 Quiz Finished</h1>
+
+    <div class="result-circle">
+        ${percent}%
+    </div>
+
+    <h2 style="text-align:center">
+        Score:
+        ${score}
+        /
+        ${questions.length}
+    </h2>
+
+    <h3 style="text-align:center;margin-top:15px">
+        Highest Score:
+        ${high}
+    </h3>
+
+    <button
+    class="restart-btn"
+    onclick="showReview()">
+    Review Mistakes
+    </button>
+
+    <button
+    class="restart-btn"
+    onclick="location.reload()">
+    Restart Quiz
+    </button>
+
+    `;
+
+}
+
+
+function showReview(){
+
+    let html = `
+
+    <h1>
+    📕 Wrong Answers
+    </h1>
+
+    `;
+
+    if(
+        wrongAnswers.length === 0
+    ){
+
+        html += `
+        <h2 style="
+        color:#22c55e;
+        text-align:center;
+        margin-top:20px;">
+        Perfect Score 🎉
+        </h2>
+        `;
+
+    }
+
+    wrongAnswers.forEach(q=>{
+
+        html += `
+
+        <div class="review-card">
+
+        <h3>
+        ${q.question}
+        </h3>
+
+        <p style="
+        color:#ef4444;
+        margin-top:10px;">
+        ❌ Your Answer:
+        ${q.selected}
+        </p>
+
+        <p style="
+        color:#22c55e;
+        margin-top:10px;">
+        ✅ Correct Answer:
+        ${q.correct}
+        </p>
+
+        </div>
+
+        `;
+
+    });
+
+    html += `
+
+    <button
+    class="restart-btn"
+    onclick="location.reload()">
+    Restart Quiz
+    </button>
+
+    `;
+
+    document
+    .querySelector(".container")
+    .innerHTML = html;
+
+}
+
+</script>
+
+</body>
+</html>

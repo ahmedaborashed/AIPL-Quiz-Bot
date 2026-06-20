@@ -1,0 +1,1003 @@
+[
+  {
+    "id": 1,
+    "question": "Which loss function is commonly used for classification?",
+    "options": {
+      "A": "Hinge Loss only",
+      "B": "Huber Loss only",
+      "C": "Cross-Entropy",
+      "D": "Mean Absolute Error"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 2,
+    "question": "Which technique helps prevent overfitting?",
+    "options": {
+      "A": "Ignoring loss",
+      "B": "Increasing noise",
+      "C": "Regularization",
+      "D": "Removing validation set"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 3,
+    "question": "Which function splits data into training and testing sets?",
+    "options": {
+      "A": "fit_transform",
+      "B": "compile",
+      "C": "predict_proba",
+      "D": "train_test_split"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is NOT a type of AI?",
+    "options": {
+      "A": "General AI",
+      "B": "Relational AI",
+      "C": "Narrow AI",
+      "D": "Artificial Super Intelligence"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 5,
+    "question": "Deep learning models typically require:",
+    "options": {
+      "A": "Large datasets",
+      "B": "Only structured data",
+      "C": "No data",
+      "D": "Very small datasets"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 6,
+    "question": "Which algorithm is used for regression problems?",
+    "options": {
+      "A": "Linear Regression",
+      "B": "K-Means",
+      "C": "Apriori",
+      "D": "KNN Classification"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 7,
+    "question": "Accuracy is calculated as:",
+    "options": {
+      "A": "TP / (TP + FN)",
+      "B": "FP / Total",
+      "C": "TP / (TP + FP)",
+      "D": "(TP + TN) / Total"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 8,
+    "question": "If input image is 6x6 and filter is 3x3 with stride 1 and no padding, output size",
+    "options": {
+      "A": "6x6",
+      "B": "5x5",
+      "C": "3x3",
+      "D": "4x4"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 9,
+    "question": "The purpose of backpropagation is to:",
+    "options": {
+      "A": "Initialize weights randomly",
+      "B": "Normalize input data",
+      "C": "Update weights using gradients",
+      "D": "Shuffle dataset"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 10,
+    "question": "Artificial Intelligence is best defined as:",
+    "options": {
+      "A": "A database management system",
+      "B": "A computer hardware device",
+      "C": "A programming language",
+      "D": "The simulation of human intelligence by machines"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 11,
+    "question": "Precision measures:",
+    "options": {
+      "A": "Correct negative predictions",
+      "B": "Correct positive predictions",
+      "C": "Model speed",
+      "D": "Total predictions"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 12,
+    "question": "Vanishing gradient problem mainly occurs in:",
+    "options": {
+      "A": "KNN",
+      "B": "Decision trees",
+      "C": "Naive Bayes",
+      "D": "Deep networks"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 13,
+    "question": "Which Python library is used for tensor operations?",
+    "options": {
+      "A": "Django",
+      "B": "Flask",
+      "C": "Tkinter",
+      "D": "PyTorch"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 14,
+    "question": "Pooling layer reduces:",
+    "options": {
+      "A": "Dataset size",
+      "B": "Spatial dimensions",
+      "C": "Learning rate",
+      "D": "Number of classes"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 15,
+    "question": "Convolution operation is mainly used for:",
+    "options": {
+      "A": "Sorting pixels",
+      "B": "Data encryption",
+      "C": "Data compression",
+      "D": "Feature extraction"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 16,
+    "question": "NumPy arrays are primarily used for:",
+    "options": {
+      "A": "Web development",
+      "B": "Numerical computations",
+      "C": "Networking",
+      "D": "Game design"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 17,
+    "question": "K-Means clustering is an example of:",
+    "options": {
+      "A": "Unsupervised Learning",
+      "B": "Supervised Learning",
+      "C": "Deep Learning",
+      "D": "Reinforcement Learning"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 18,
+    "question": "Which of the following is a Boolean value?",
+    "options": {
+      "A": "\"True\"",
+      "B": "True (boolean)",
+      "C": "true",
+      "D": "None"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 19,
+    "question": "Differences among network output and the probable outcome are calculated",
+    "options": {
+      "A": "None of them",
+      "B": "Positive function",
+      "C": "Loss function",
+      "D": "Negative function"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 20,
+    "question": "What is the Training/learning algorithm responsible for in an ANN?",
+    "options": {
+      "A": "Defining the network's structure",
+      "B": "Processing the input data",
+      "C": "Selecting the activation function",
+      "D": "Determining the weights on the connections"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 21,
+    "question": "Which biological behavior inspires Genetic Algorithms (GA)?",
+    "options": {
+      "A": "Human nervous system",
+      "B": "Genetics and Evolution",
+      "C": "Annealing process",
+      "D": "Behavior of an ant colony"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 22,
+    "question": "What type of solution does Soft Computing typically yield?",
+    "options": {
+      "A": "Always precise solutions",
+      "B": "Approximate or imprecise solutions",
+      "C": "Only analytical solutions",
+      "D": "Only binary solutions"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 23,
+    "question": "Which neural network model is associated with Supervised Learning?",
+    "options": {
+      "A": "Clustering",
+      "B": "Self-organizing maps (SOM)",
+      "C": "Perceptron",
+      "D": "Hopfield"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 24,
+    "question": "Without a fitness function, a Genetic Algorithm would:",
+    "options": {
+      "A": "Not be able to evaluate the solutions",
+      "B": "Not be able to create a genetic representation",
+      "C": "Not be able to apply mutation and crossover",
+      "D": "Not be able to generate a population"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 25,
+    "question": "The random mutation of offspring in Genetic Algorithms serves to:",
+    "options": {
+      "A": "Reduce the computational load",
+      "B": "Simplify the fitness evaluation process",
+      "C": "Guarantee convergence to the optimal solution",
+      "D": "Introduce new genetic material and prevent population from becoming too homogeneous"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 26,
+    "question": "How is the evolutionary process organized in a Genetic Algorithm?",
+    "options": {
+      "A": "In generations",
+      "B": "In parallel threads",
+      "C": "In a continuous stream",
+      "D": "In discrete steps"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 27,
+    "question": "What does Convergence refer to in the context of GA operators?",
+    "options": {
+      "A": "The way solutions are represented in the GA",
+      "B": "The method for introducing diversity in the next generation",
+      "C": "The criterion used to decide when to terminate the algorithm",
+      "D": "The process of combining two parent solutions"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 28,
+    "question": "When does the mutation operator typically occur in a Genetic Algorithm?",
+    "options": {
+      "A": "After selection and crossover, on the new population",
+      "B": "Before the initial population is created",
+      "C": "Before selection",
+      "D": "During crossover"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 29,
+    "question": "What is a main property that makes arrays of bits convenient for genetic",
+    "options": {
+      "A": "Their parts are easily aligned due to their fixed size",
+      "B": "They are easy to compress",
+      "C": "They are computationally efficient",
+      "D": "They can represent any type of data"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 30,
+    "question": "What does the WORA principle mean for Java?",
+    "options": {
+      "A": "It requires recompilation for different platforms",
+      "B": "It is only used for web development",
+      "C": "It can only run on specific platforms",
+      "D": "It can run on any platform that supports it without recompilation"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 31,
+    "question": "What is a defining characteristic of a Multi-Layer Neural Network?",
+    "options": {
+      "A": "It has one or more hidden layers between the input and output layers",
+      "B": "It only uses recurrent connections",
+      "C": "It has no hidden layers",
+      "D": "It has only input and output layers"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 32,
+    "question": "How suitable are traditional optimization approaches for parallel computing?",
+    "options": {
+      "A": "The approach may not be suitable",
+      "B": "They are highly suitable",
+      "C": "They are always the best choice for parallel computing",
+      "D": "They are moderately suitable"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 33,
+    "question": "The concept of Fuzzy Logic is primarily concerned with handling notions that",
+    "options": {
+      "A": "Clarity or precision",
+      "B": "Context",
+      "C": "Complexity",
+      "D": "Ambiguity"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 34,
+    "question": "Which of the following is a characteristic of Soft Computing?",
+    "options": {
+      "A": "It does not require any mathematical modeling of problem-solving",
+      "B": "Its algorithms are static",
+      "C": "It always yields the precise solution",
+      "D": "It requires precise mathematical modeling"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 35,
+    "question": "An e-commerce platform uses a neural network to group customers based on",
+    "options": {
+      "A": "Classification; assigning customers to predefined market segments",
+      "B": "Function Approximation; modeling complex relationship between customer attributes",
+      "C": "Clustering; discovering natural groupings of customers based on their behavior",
+      "D": "Regression; predicting the likelihood of a customer making a purchase"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 36,
+    "question": "Why is Python a favorite programming language among developers in AI?",
+    "options": {
+      "A": "Its syntax simplicity and versatility",
+      "B": "Its strong typing and strict structure",
+      "C": "Its long history and extensive legacy code",
+      "D": "Its execution speed and low-level control"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 37,
+    "question": "What is the output? i = 0 / while i < 3: / i += 1 / if i == 2: continue / print(i)",
+    "options": {
+      "A": "1 2 3",
+      "B": "Error",
+      "C": "1 3",
+      "D": "2 3"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 38,
+    "question": "Feedforward neural network:",
+    "options": {
+      "A": "Has no feedback",
+      "B": "Has loops",
+      "C": "Is random",
+      "D": "Is circular"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 39,
+    "question": "continue statement:",
+    "options": {
+      "A": "Deletes variable",
+      "B": "Skips current iteration",
+      "C": "Ends loop",
+      "D": "Restarts program"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 40,
+    "question": "Colon (:) in Python is used to:",
+    "options": {
+      "A": "Define variable",
+      "B": "End program",
+      "C": "Start block",
+      "D": "Print output"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 41,
+    "question": "Which keyword defines a function in Python?",
+    "options": {
+      "A": "func",
+      "B": "function",
+      "C": "define",
+      "D": "def"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 42,
+    "question": "What does **kwargs store?",
+    "options": {
+      "A": "Tuple",
+      "B": "String",
+      "C": "List",
+      "D": "Dictionary"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 43,
+    "question": "What is a lambda in Python?",
+    "options": {
+      "A": "A file object",
+      "B": "A loop",
+      "C": "A small anonymous function",
+      "D": "An exception type"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 44,
+    "question": "What is recursion?",
+    "options": {
+      "A": "Loop",
+      "B": "Condition",
+      "C": "Variable",
+      "D": "Function calling itself"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 45,
+    "question": "Child class can:",
+    "options": {
+      "A": "Ignore class",
+      "B": "Override methods",
+      "C": "Delete parent",
+      "D": "Only inherit"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 46,
+    "question": "x is y checks:",
+    "options": {
+      "A": "Value equality",
+      "B": "Length",
+      "C": "Memory reference",
+      "D": "Type"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 47,
+    "question": "A programming paradigm is:",
+    "options": {
+      "A": "A hardware device",
+      "B": "A database",
+      "C": "A way to classify programming languages",
+      "D": "A compiler"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 48,
+    "question": "Which method adds an item to a list?",
+    "options": {
+      "A": "append()",
+      "B": "push()",
+      "C": "add()",
+      "D": "insertitem()"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 49,
+    "question": "What is the output of: print(4 == 4)?",
+    "options": {
+      "A": "Error",
+      "B": "true",
+      "C": "4",
+      "D": "false"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 50,
+    "question": "OOP focuses on:",
+    "options": {
+      "A": "Variables",
+      "B": "Loops",
+      "C": "Objects",
+      "D": "Functions"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 51,
+    "question": "Instance method is:",
+    "options": {
+      "A": "Global",
+      "B": "Outside class",
+      "C": "Static only",
+      "D": "Inside class"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 52,
+    "question": "Inheritance means:",
+    "options": {
+      "A": "Class gets properties of another class",
+      "B": "Looping",
+      "C": "Copying variables",
+      "D": "Printing"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 53,
+    "question": "Garbage collection handles / is:",
+    "options": {
+      "A": "Output / Error handling",
+      "B": "Input / Loop execution",
+      "C": "Memory management",
+      "D": "Loop / Debugging"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 54,
+    "question": "Which function is used to display output?",
+    "options": {
+      "A": "echo()",
+      "B": "output()",
+      "C": "show()",
+      "D": "print()"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 55,
+    "question": "Structured programming focuses on:",
+    "options": {
+      "A": "Random jumps",
+      "B": "Code clarity and loops",
+      "C": "Machine code",
+      "D": "Assembly only"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 56,
+    "question": "Event-driven programming depends on:",
+    "options": {
+      "A": "CPU speed",
+      "B": "Events like clicks",
+      "C": "Memory size",
+      "D": "Variables"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 57,
+    "question": "What is the output of: print(type(5))?",
+    "options": {
+      "A": "float",
+      "B": "number",
+      "C": "int",
+      "D": "str"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 58,
+    "question": "Which expression is valid?",
+    "options": {
+      "A": "2 +",
+      "B": "y + 6",
+      "C": "if x",
+      "D": "loop"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 59,
+    "question": "Infinite loop occurs when:",
+    "options": {
+      "A": "Loop ends quickly",
+      "B": "Syntax error",
+      "C": "Condition never becomes false",
+      "D": "Compiler fails"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 60,
+    "question": "Interpreted languages:",
+    "options": {
+      "A": "Compile first",
+      "B": "Execute line by line",
+      "C": "Cannot run",
+      "D": "Are hardware"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 61,
+    "question": "In Python, comments start with:",
+    "options": {
+      "A": "//",
+      "B": "#",
+      "C": "**",
+      "D": "<!--"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 62,
+    "question": "ANN processes information:",
+    "options": {
+      "A": "Sequentially only",
+      "B": "Parallelly",
+      "C": "Manually",
+      "D": "Randomly"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 63,
+    "question": "The basic unit of the human brain is:",
+    "options": {
+      "A": "Axon",
+      "B": "Synapse",
+      "C": "Neuron",
+      "D": "Dendrite"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 64,
+    "question": "Knowledge in ANN is stored in:",
+    "options": {
+      "A": "Files",
+      "B": "CPU",
+      "C": "Weights",
+      "D": "RAM"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 65,
+    "question": "What is the output of print('5' + '2')?",
+    "options": {
+      "A": "52",
+      "B": "7",
+      "C": "Error",
+      "D": "10"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 66,
+    "question": "What is the output of: for i in range(3): print(i)",
+    "options": {
+      "A": "0 1 2",
+      "B": "0 1 2 3",
+      "C": "1 2 3",
+      "D": "error"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 67,
+    "question": "What is the output of: print(7 > 3)?",
+    "options": {
+      "A": "3",
+      "B": "true",
+      "C": "false",
+      "D": "7"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 68,
+    "question": "A neuron fires when:",
+    "options": {
+      "A": "Input is zero",
+      "B": "Sum exceeds threshold",
+      "C": "Weight is zero",
+      "D": "Output is zero"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 69,
+    "question": "ANN can handle:",
+    "options": {
+      "A": "Only clean data",
+      "B": "Noisy and incomplete data",
+      "C": "No data",
+      "D": "Only numbers"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 70,
+    "question": "How do you start a while loop?",
+    "options": {
+      "A": "repeat x < 5:",
+      "B": "for x < 5:",
+      "C": "loop x < 5:",
+      "D": "while x < 5:"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 71,
+    "question": "What is the output of: print(2 + 3 * 2)?",
+    "options": {
+      "A": "8",
+      "B": "10",
+      "C": "12",
+      "D": "7"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 72,
+    "question": "Which of the following is a tuple?",
+    "options": {
+      "A": "{1,2}",
+      "B": "<1,2>",
+      "C": "[1,2]",
+      "D": "(1,2)"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 73,
+    "question": "What is the output of: print('5' * 2)?",
+    "options": {
+      "A": "10",
+      "B": "55",
+      "C": "Error",
+      "D": "25"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 74,
+    "question": "What is the output of: print(bool(0))?",
+    "options": {
+      "A": "Error",
+      "B": "true",
+      "C": "false",
+      "D": "0"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 75,
+    "question": "What is the output of: print(10 % 3)?",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "0",
+      "D": "10"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 76,
+    "question": "What is the default return value of a function with no return statement?",
+    "options": {
+      "A": "Empty",
+      "B": "0",
+      "C": "None",
+      "D": "false"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 77,
+    "question": "The else statement is used with:",
+    "options": {
+      "A": "if",
+      "B": "for",
+      "C": "import",
+      "D": "def"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 78,
+    "question": "Which operator is used for exponentiation?",
+    "options": {
+      "A": "//",
+      "B": "^",
+      "C": "**",
+      "D": "*"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 79,
+    "question": "Which conditional statement is correct?",
+    "options": {
+      "A": "if x = 5:",
+      "B": "if x := 5",
+      "C": "if (x 5)",
+      "D": "if x == 5:"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 80,
+    "question": "What is the output of: print('Hello' + 'World')?",
+    "options": {
+      "A": "Error",
+      "B": "Hello+World",
+      "C": "Hello World",
+      "D": "HelloWorld"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 81,
+    "question": "What is the output of: print(2**3)?",
+    "options": {
+      "A": "9",
+      "B": "6",
+      "C": "8",
+      "D": "5"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 82,
+    "question": "Which function converts a number to string?",
+    "options": {
+      "A": "int()",
+      "B": "float()",
+      "C": "bool()",
+      "D": "str()"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 83,
+    "question": "Which method removes an item from a list?",
+    "options": {
+      "A": "popitem()",
+      "B": "delete()",
+      "C": "clear()",
+      "D": "remove()"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 84,
+    "question": "Which of the following is a dictionary?",
+    "options": {
+      "A": "<\"a\":1>",
+      "B": "[\"a\":1]",
+      "C": "{\"a\":1}",
+      "D": "(\"a\":1)"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 85,
+    "question": "Which function returns the length of an object?",
+    "options": {
+      "A": "size()",
+      "B": "count()",
+      "C": "len()",
+      "D": "length()"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 86,
+    "question": "What is the output of: print(5 // 2)?",
+    "options": {
+      "A": "3",
+      "B": "1",
+      "C": "2.5",
+      "D": "2"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 87,
+    "question": "What is the data type of text in Python?",
+    "options": {
+      "A": "str",
+      "B": "text",
+      "C": "string",
+      "D": "char"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 88,
+    "question": "Which of the following is a correct Python list?",
+    "options": {
+      "A": "(1,2,3)",
+      "B": "<1,2,3>",
+      "C": "{1,2,3}",
+      "D": "[1,2,3]"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 89,
+    "question": "Which function is used to get user input?",
+    "options": {
+      "A": "read()",
+      "B": "scan()",
+      "C": "input()",
+      "D": "get()"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 90,
+    "question": "Which of the following is NOT a Python data type?",
+    "options": {
+      "A": "float",
+      "B": "int",
+      "C": "list",
+      "D": "char"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 91,
+    "question": "Which keyword is used for loops?",
+    "options": {
+      "A": "loop",
+      "B": "repeat",
+      "C": "for",
+      "D": "iterate"
+    },
+    "answer": "C"
+  }
+]
